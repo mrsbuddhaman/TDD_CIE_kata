@@ -50,6 +50,12 @@ class Consecutive_test < Minitest::Test
 		find_max_consecutive_identical_elements(Array.new(100,1))
 		assert_equal(100, results)
 	end
+	
+	def test_for_max_identical_elements
+		results =
+		find_max_consecutive_identical_elements( [1,2,2,2,3,3,1])
+		assert_equal(3,results)
+	end
 
 
 end
