@@ -56,6 +56,28 @@ class Consecutive_test < Minitest::Test
 		find_max_consecutive_identical_elements( [1,2,2,2,3,3,1])
 		assert_equal(3,results)
 	end
-
+	
+	def test_a_different_array
+		results =
+		find_max_consecutive_identical_elements( [1,2,3,3])
+		assert_equal(2, results)
+	end
+	
+	def test_for_string_value
+		results =
+		find_max_consecutive_identical_elements( "hello")
+		assert_equal(2, results)
+	end
+	
+	def test_a_different_string
+		results =
+		find_max_consecutive_identical_elements( "this was sooooooo hard")
+		assert_equal(7, results)
+	end
+	
+	
+	
+	
+	
 
 end

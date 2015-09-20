@@ -1,6 +1,11 @@
-def find_max_consecutive_identical_elements(any_array)
+def find_max_consecutive_identical_elements(any_array) 
   consecutive_elements = []
   count_of_consecutive_elements = []
+  if any_array.include? ("")
+  any_array = any_array.split(//)
+  else
+  any_array = any_array
+  end
   any_array.each do | value |
 	if consecutive_elements.length == 0 
 	   consecutive_elements << value
@@ -16,7 +21,7 @@ def find_max_consecutive_identical_elements(any_array)
  end
   count_of_consecutive_elements << consecutive_elements.count
   count_of_consecutive_elements.max 
-
+ 
 end
 
 
